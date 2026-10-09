@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adult Host Drawing</title>
+<link rel="stylesheet" href="adult-host.css">
+</head>
+<body>
+<header>
+  <h1>The adult host</h1>
+  <p class="sub">A drawing for your yes. Nothing past this page is built until you validate it.</p>
+</header>
+
+<section class="stage">
+  <div class="hero">
+    <div id="hero" class="face"></div>
+    <div class="now">Now: <b id="now">Neutral</b> · he blinks, breathes and glances on his own</div>
+  </div>
+  <div class="panel">
+    <h2>Play with his muscles</h2>
+    <p class="hint">Each slider is one facial muscle. Every expression below is only a mix of these.</p>
+    <div id="sliders"></div>
+    <button id="reset">Back to neutral</button>
+  </div>
+</section>
+
+<section>
+  <h2>His expressions</h2>
+  <p class="hint">Click one: he moves into it the way he will in a video. These names are the hints you write in a narration.</p>
+  <div id="expressions" class="grid"></div>
+</section>
+
+<section>
+  <h2>His mouth shapes</h2>
+  <p class="hint">Nine shapes cover all speech. The voice track picks them, sound by sound, and the mood colours them.</p>
+  <div id="mouths" class="grid small"></div>
+</section>
+
+<section class="spec">
+  <h2>The spec</h2>
+  <div class="cols">
+    <div>
+      <h3>What you give it</h3>
+      <ul>
+        <li>Any narration, any length.</li>
+        <li>Hints in brackets if you want them: <code>[warm] Welcome back. [concerned] But something broke.</code></li>
+        <li>No hints: I read each sentence and pick the mood myself.</li>
+        <li>Or your own recorded voice instead of a generated one.</li>
+      </ul>
+      <h3>The voice</h3>
+      <ul>
+        <li>An adult narrator on ElevenLabs v3, or your cloned voice.</li>
+        <li>The same hints tell the voice how to say the line.</li>
+      </ul>
+      <h3>What you get</h3>
+      <ul>
+        <li>A 1080p video of him saying it.</li>
+        <li>Or a see-through overlay, to drop him in a corner of any video.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>How he acts</h3>
+      <ul>
+        <li>About 25 face muscles, mixed. Never a stock pose.</li>
+        <li>Moods show at a third to two thirds of full strength: adult acting, not cartoon.</li>
+        <li>Each mood arrives a beat before the sentence, and relaxes after it.</li>
+        <li>Stressed words get a small nod or a brow lift.</li>
+        <li>Lips sync to the actual audio, sound by sound.</li>
+      </ul>
+      <h3>Between words</h3>
+      <ul>
+        <li>He blinks at a human rhythm: more when thinking, less when focused.</li>
+        <li>He breathes before sentences and glances away to think.</li>
+        <li>Nothing loops. Ten minutes in, he still never repeats himself.</li>
+        <li>He turns his head up to about a quarter turn.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Not in it</h3>
+      <ul>
+        <li>Hands, arms and body gestures.</li>
+        <li>Full profile turns.</li>
+        <li>A photoreal face. That is a separate route, on paid video models.</li>
+      </ul>
+      <h3>Done when</h3>
+      <ul>
+        <li>You watch a narrated render a few minutes long.</li>
+        <li>You call it watchable.</li>
+      </ul>
+      <h3>Your call</h3>
+      <ul>
+        <li><b>The look.</b> This illustrated man, or a variant: beard, glasses, older, other hair. Each is cheap.</li>
+        <li><b>The voice.</b> A stock ElevenLabs narrator, or a clone of yours.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<script src="../host/base.js"></script>
+<script src="../host/head.js"></script>
+<script src="../host/eyes.js"></script>
+<script src="../host/mouth.js"></script>
+<script src="../host/face.js"></script>
+<script src="../host/expressions.js"></script>
+<script src="adult-host.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <title>Super Karen Sliders</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #12161a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: -apple-system, "Segoe UI", system-ui, sans-serif; color: #e8ecef; }
+      #face { position: absolute; left: 70px; top: 70px; width: 940px; height: 940px; border-radius: 22px; overflow: hidden; border: 1px solid #2b333b; }
+      #face svg { display: block; width: 100%; height: 100%; }
+      #panel { position: absolute; left: 1080px; top: 70px; width: 770px; height: 940px; background: #1b2127; border: 1px solid #2b333b; border-radius: 22px; padding: 30px 40px; }
+      #count { font-size: 22px; color: #9aa6b0; letter-spacing: 0.06em; text-transform: uppercase; }
+      #name { font-size: 64px; font-weight: 700; line-height: 1.1; margin: 4px 0 22px; color: #e0a37f; }
+      #sliders .row { display: grid; grid-template-columns: 300px 1fr; align-items: center; height: 30px; font-size: 19px; color: #6f7a84; }
+      #sliders .row.on { color: #e8ecef; }
+      .track { position: relative; height: 6px; border-radius: 3px; background: #2e363e; }
+      .mid { position: absolute; left: 50%; top: -5px; width: 2px; height: 16px; background: #46505a; }
+      .fill { position: absolute; top: 0; height: 6px; border-radius: 3px; background: #e0a37f; }
+      .thumb { position: absolute; top: 50%; width: 20px; height: 20px; margin: -10px 0 0 -10px; border-radius: 50%; background: #e0a37f; box-shadow: 0 0 0 4px #1b2127; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="karen-sliders" data-start="0" data-duration="54.05" data-width="1920" data-height="1080">
+      <div id="face" class="clip" data-start="0" data-duration="54.05" data-track-index="0"></div>
+      <div id="panel" class="clip" data-start="0" data-duration="54.05" data-track-index="1">
+        <div id="count"></div>
+        <div id="name"></div>
+        <div id="sliders"></div>
+      </div>
+    </div>
+    <script src="host/base.js"></script>
+    <script src="host/head.js"></script>
+    <script src="host/eyes.js"></script>
+    <script src="host/mouth.js"></script>
+    <script src="host/face.js"></script>
+    <script src="host/expressions.js"></script>
+    <script src="host/life.js"></script>
+    <script src="host/stage.js"></script>
+    <script src="host/sliders-film.js"></script>
+    <script>
+      filmSliders(document.getElementById("sliders"));
+      const tl = gsap.timeline({ paused: true });
+      const clock = { t: 0 };
+      tl.to(clock, { t: FILM_DURATION, duration: FILM_DURATION, ease: "none", onUpdate: () => filmDraw(clock.t) }, 0);
+      filmDraw(0);
+      window.__timelines["karen-sliders"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

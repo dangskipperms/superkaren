@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <title>Pip Talks</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="rig/stage.css">
+  </head>
+  <body>
+    <div data-hf-id="hf-9xnz" id="root" data-composition-id="talk" data-start="0" data-duration="37.6" data-width="1920" data-height="1080">
+      <div data-hf-id="hf-zq4r" id="bg" class="clip" data-start="0" data-duration="37.6" data-track-index="0"></div>
+      <div data-hf-id="hf-vint" id="caption" class="clip" data-start="0" data-duration="37.6" data-track-index="1">Lip-synced to a real voice. One SVG rig.</div>
+      <div data-hf-id="hf-qzn8" id="mood" class="clip" data-start="0" data-duration="37.6" data-track-index="3"></div>
+      <div data-hf-id="hf-ti6j" id="subs" class="clip" data-start="0" data-duration="37.6" data-track-index="4"></div>
+      <audio data-hf-id="hf-5q2p" id="voice" src="assets/talk/pip.mp3" data-start="0" data-duration="37.6" data-track-index="5" data-volume="1"></audio>
+      <svg data-hf-id="hf-hghp" id="rig" class="clip" data-start="0" data-duration="37.6" data-track-index="2" data-layout-allow-overflow="" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" />
+    </div>
+    <script src="rig/util.js"></script>
+    <script src="rig/markup.js"></script>
+    <script src="rig/poses.js"></script>
+    <script src="rig/moods.js"></script>
+    <script src="rig/engine.js"></script>
+    <script src="rig/parts.js"></script>
+    <script src="rig/face.js"></script>
+    <script src="talk/pip.js"></script>
+    <script src="rig/visemes.js"></script>
+    <script src="rig/talker.js"></script>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const clock = { t: 0 };
+      tl.to(clock, { t: 37.6, duration: 37.6, ease: "none", onUpdate: () => draw(clock.t) }, 0);
+      draw(0);
+      window.__timelines["talk"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

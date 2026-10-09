@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <title>Speak to Your Manager</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="film/manager/manager.css">
+  </head>
+  <body>
+    <div id="root" data-composition-id="manager" data-start="0" data-duration="122.88" data-width="1920" data-height="1080">
+      <div id="picture" class="clip" data-start="0" data-duration="122.88" data-track-index="0">
+        <div id="bg"></div>
+        <div id="kinback"></div>
+        <div id="stage"></div>
+        <div id="props"></div>
+        <div id="kin"></div>
+        <div id="tint"></div>
+        <div id="scan"></div>
+      </div>
+      <div id="lyrics" class="clip" data-start="0" data-duration="122.88" data-track-index="1"></div>
+      <div id="section" class="clip" data-start="0" data-duration="122.88" data-track-index="2"></div>
+      <div id="flash" class="clip" data-start="0" data-duration="122.88" data-track-index="3"></div>
+      <div id="dead" class="clip" data-start="0" data-duration="122.88" data-track-index="4"></div>
+      <audio id="song" src="assets/manager/song.mp3" data-start="0" data-duration="122.88" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script src="talk/manager.js"></script>
+    <script src="host/base.js"></script>
+    <script src="host/head.js"></script>
+    <script src="host/eyes.js"></script>
+    <script src="host/mouth.js"></script>
+    <script src="host/face.js"></script>
+    <script src="host/expressions.js"></script>
+    <script src="host/life.js"></script>
+    <script src="host/lipsync.js"></script>
+    <script src="film/manager/beat.js"></script>
+    <script src="film/manager/acting.js"></script>
+    <script src="film/manager/stage.js"></script>
+    <script src="film/manager/props.js"></script>
+    <script src="film/manager/type.js"></script>
+    <script src="film/manager/scenes.js"></script>
+    <script src="film/manager/main.js"></script>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const clock = { t: 0 };
+      tl.to(clock, { t: 122.88, duration: 122.88, ease: "none", onUpdate: () => filmDraw(clock.t) }, 0);
+      filmDraw(0);
+      window.__timelines["manager"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

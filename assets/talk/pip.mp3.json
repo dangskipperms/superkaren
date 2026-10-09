@@ -1,0 +1,18 @@
+{
+  "output": "assets/talk/pip.mp3",
+  "history": [
+    {
+      "tool": "tts",
+      "backend": "elevenlabs",
+      "model": "eleven_v3",
+      "voice": "TX3LPaxmHKxFdv7VOQHJ",
+      "prompt": "[cheerful] Hi! I'm Pip. I'm made of nothing but code.\n[curious] And you're wondering... can a drawing really talk?\n[proud] Well, watch my mouth. Big, bold vowels. Fuzzy, fluffy feathers. Lovely little lullabies.\n[skeptical] Hmm. You don't believe me?\n[whispers] Here's a secret. I don't even have lungs.\n[laughs] Ha ha ha!\n[worried] But wait. What if the power goes off?\n[sad] Then I'd just... vanish.\n[angry] No! That's not fair!\n[embarrassed] Oops. Sorry. I got carried away.\n[warm] Thanks for watching me. Bye bye!",
+      "format": "mp3_44100_128",
+      "timestamps": true,
+      "output": "assets/talk/pip.mp3",
+      "seed": 7,
+      "stability": 0.0,
+      "at": "2026-10-07T13:39:06Z"
+    }
+  ]
+}
