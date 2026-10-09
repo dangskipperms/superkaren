@@ -4,6 +4,8 @@ A cartoon face that acts, made of nothing but code. Claude Code drew her and bui
 
 ![Super Karen running through her expressions](media/karen.gif)
 
+[![Watch Super Karen on YouTube](https://img.youtube.com/vi/cIWPgXm5TEU/maxresdefault.jpg)](https://www.youtube.com/watch?v=cIWPgXm5TEU)
+
 - One hand-built SVG face. No images, no AI image model.
 - Face muscles from FACS, the system psychologists use to read faces. Each one is a slider, left and right apart.
 - 27 expressions, each a mix of those muscles: a faint fake smile, a real one, furious, evil, grieving.
