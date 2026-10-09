@@ -22,7 +22,7 @@ She plays in HyperFrames: HTML compositions rendered to MP4.
 ## Laws of the motion
 - One GSAP tween drives a clock. Every face value is a pure function of that time, so any frame can be seeked.
 - New motion is an expression or a pose, or a keyframe, never a new tween.
-- The eye opening is a clip cut between the two lid curves, never skin painted over the eye.
+- The eye shows through a clip between the two lid curves. Never paint skin over it.
 
 ## Make her react to a narration
 - She stays silent and reacts. Tag the narration's own text: `Meet [warm] Karen.` Grammar in `tools/react.py`.
